@@ -21,7 +21,7 @@ jobs:
             for line in f.readlines():
                 print(line)
                 
-                if "version" in line:
+                if "VERSION" in line:
                     ver_number = line.split("=")[0]
                     break
             print(ver_number)
