@@ -16,4 +16,4 @@ jobs:
           python-version: 3.x #install the python needed      
       - name: execute py script
         run: |
-             python verion_update.py
+             python version_update.py
