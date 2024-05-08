@@ -1,1 +1,1 @@
-VERSION=str(ver_number)
+VERSION=1
