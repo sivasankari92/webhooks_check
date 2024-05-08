@@ -6,17 +6,16 @@ on:
       - main
 
 jobs:
-  version-bump:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check out code
-        uses: actions/checkout@v3
-
-      - name: Bump version and push tag
-        run: |
-          # Assuming the version file contains a simple number like 1.0.0          
-          echo "HELLO"
-          git config user.name github-actions
-          git config user.email github-actions@github.com
-          git add "HELLO"
-          git commit -m "Bump version to"       
+   run-script:
+   runs-on: ubuntu-latest
+   
+  steps:
+  
+  - name: Checkout repository  
+  uses: actions/checkout@v2  
+  - name: Set up Python  
+  uses: actions/setup-python@v2  
+  with:  
+  python-version: '3.9'  
+  - name: Run script  
+  run: print("hello") 
