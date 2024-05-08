@@ -22,7 +22,7 @@ jobs:
                 print(line)
                 
                 if "VERSION" in line:
-                    ver_number = line.split("=")[0]
+                    ver_number = line.split("=")[1]
                     break
             print(ver_number)
             ver_number = int(ver_number) + 1
