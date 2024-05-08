@@ -22,7 +22,7 @@ jobs:
             f.close()
             ver_number = 0
             if "version" in line:
-                ver_number = line.split("=")[1]
+                ver_number = line.split("=")[0]
             print(ver_number)
             ver_number = ver_number + 1
             f = open("version.txt", "w")
