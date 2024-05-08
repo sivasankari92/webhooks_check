@@ -1,7 +1,7 @@
 name: Update Version on Merge
 
 on:
-  pull:
+  pull_request:
     branches:
       - master
 
