@@ -14,10 +14,8 @@ jobs:
 
       - name: Bump version and push tag
         run: |
-          # Assuming the version file contains a simple number like 1.0.0
-          VERSION=$(cat VERSION)
-          NEW_VERSION=$(echo $VERSION | awk -F. '{$NF = $NF + 1;} 1' | sed 's/ /./g')
-          echo $NEW_VERSION > VERSION
+          # Assuming the version file contains a simple number like 1.0.0          
+          echo "HELLO"
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add VERSION
