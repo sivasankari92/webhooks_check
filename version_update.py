@@ -11,6 +11,6 @@ print(ver_number)
 ver_number = int(ver_number) + 1
 f.close()
 f = open("version.txt", "w")
-f.write(f"VERSION=str(ver_number)")
+f.write(f"VERSION={str(ver_number)}")
 print(ver_number)
 f.close()
