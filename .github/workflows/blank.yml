@@ -30,8 +30,5 @@ jobs:
             f = open("version.txt", "w")
             f.write(f"VERSION=str(ver_number)")
             print(ver_number)
-            git add version.txt
-            git commit -m "crongenerated"
-            git push
             
                 
