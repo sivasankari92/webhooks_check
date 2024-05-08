@@ -1,20 +1,21 @@
-name: Check WorkFlow
+name: Version Update
 
 on:
   push:
     branches: [ main ]
 
 jobs:
-  build:
+  updateversion:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-python@v4
+      - name: checkout repo content
+        uses: actions/checkout@v3 # checkout the repository content to github runner.
+      - name: setup python
+        uses: actions/setup-python@v4
         with:
-          python-version: '3.x'
-      - uses: jannekem/run-python-script-action@v1
-        with:
-          script: |
+          python-version: 3.x #install the python needed      
+      - name: execute py script
+        run: |
             print("hello")
             f = open("version.txt", "r")
             ver_number = 0
@@ -30,6 +31,3 @@ jobs:
             f = open("version.txt", "w")
             f.write(f"VERSION=str(ver_number)")
             print(ver_number)
-            
-            
-                
