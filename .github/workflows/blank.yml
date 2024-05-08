@@ -15,7 +15,7 @@ jobs:
         with:
           python-version: 3.x #install the python needed      
       - name: execute py script
-        run: |
+        script: |
             print("hello")
             f = open("version.txt", "r")
             ver_number = 0
