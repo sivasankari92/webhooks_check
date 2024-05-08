@@ -30,8 +30,8 @@ jobs:
             f = open("version.txt", "w")
             f.write(f"VERSION=str(ver_number)")
             print(ver_number)
-            git config --global user.name github-actions
-            git config --global user.email github-actions@github.com
+            git config --global user.name 'siva'
+            git config --global user.email "ms.sankarii@gmail.com"
             git add version.txt
             git commit -m "crongenerated"
             git push
