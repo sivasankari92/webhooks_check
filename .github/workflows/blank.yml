@@ -1,0 +1,21 @@
+name: Update Version on Merge
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  update-version:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      
+      - name: Bump version and push tag
+        run: |
+          git config --global user.name 'Sanks'
+          git config --global user.email 'ms.sankarii@gmail.com'
+          VERSION=`date "+%Y%m%d%H%M%S"` # Simple timestamp-based version
+          git tag $VERSION
+          git push origin --tags
