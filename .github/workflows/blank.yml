@@ -14,5 +14,5 @@ jobs:
           python-version: '3.x'
       - uses: run-python-script-action@v1
         with:
-          script:
+          script: |
             print("hello")
