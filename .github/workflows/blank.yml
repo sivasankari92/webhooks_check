@@ -1,7 +1,7 @@
 name: Version Update
 
 on:
-  pull_request:
+  push:
     branches: [ main ]
 
 jobs:
@@ -20,6 +20,6 @@ jobs:
              git config user.name github-actions
              git config user.email github-actions@github.com
              git add .
-             git commit --amend -m "done"
-             git push origin HEAD:main
+             git commit -m "done"
+             git push
 
