@@ -19,7 +19,7 @@ jobs:
              python version_update.py
              git config user.name github-actions
              git config user.email github-actions@github.com
-             git add version_update.py
+             git add .
              git commit -m "version updated"
              git push
 
